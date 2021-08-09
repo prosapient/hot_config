@@ -6,7 +6,7 @@ The package can be installed by adding `hot_config` to your list of dependencies
 ```elixir
 def deps do
   [
-    {:hot_config, "~> 0.1"}
+    {:hot_config, "~> 0.2"}
   ]
 end
 ```

@@ -13,7 +13,7 @@ by adding `hot_config` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:hot_config, "~> 0.1.0"}
+    {:hot_config, "~> 0.2"}
   ]
 end
 ```

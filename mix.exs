@@ -4,8 +4,8 @@ defmodule HotConfig.MixProject do
   def project do
     [
       app: :hot_config,
-      version: "0.1.0",
-      elixir: "~> 1.11",
+      version: "0.2.0",
+      elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
@@ -23,7 +23,7 @@ defmodule HotConfig.MixProject do
     [
       licenses: ["Apache 2"],
       links: %{
-        GitHub: "https://github.com/prosapient/confispex"
+        GitHub: "https://github.com/prosapient/hot_config"
       }
     ]
   end

@@ -30,7 +30,7 @@ defmodule HotConfig.JSONFile do
     |> Keyword.get(:path)
     |> case do
       nil ->
-        Logger.debug("Path to JSON config is not set")
+        Logger.debug("HotConfig: Path to JSON config is not set")
         config
 
       path ->
@@ -62,11 +62,17 @@ defmodule HotConfig.JSONFile do
       json
     else
       {:file, {:error, reason}} ->
-        Logger.warning("Unable to read config file (#{path}): #{:file.format_error(reason)}")
+        Logger.warning(
+          "HotConfig: Unable to read config file (#{path}): #{:file.format_error(reason)}"
+        )
+
         %{}
 
       {:json, {:error, %Jason.DecodeError{} = error}} ->
-        Logger.error("Unable to decode json file (#{path}): #{Exception.message(error)}")
+        Logger.error(
+          "HotConfig: Unable to decode json file (#{path}): #{Exception.message(error)}"
+        )
+
         %{}
     end
   end
