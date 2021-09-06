@@ -14,8 +14,7 @@ defmodule HotConfig.Resolver do
 
       # or if you're using `confispex`
       def merge_to_source(new_config) do
-        {:ok, _} = Application.ensure_all_started(:confispex)
-        Confispex.merge_store(new_config)
+        Confispex.update_store(&Map.merge(&1, new_config))
       end
   """
   @callback merge_to_source(new_config :: map()) :: :ok
