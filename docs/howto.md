@@ -56,3 +56,11 @@ defmodule MyApp.HotConfigResolver do
   end
 end
 ```
+
+## Start Reloader
+
+Add the following line to `MyApp.Application`:
+
+```elixir
+HotConfig.Reloader.start()
+```
